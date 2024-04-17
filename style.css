@@ -1,0 +1,62 @@
+/* FONTES IMPORTADAS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* RESET DE CONFIGURAÇÕES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header{
+    /* Dimensions */
+    height: 12vh;
+
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Style */
+    background-color: #023535;
+    color: #fff;
+}
+/* NAVBAR */
+.navbar{
+    /* Layout */
+    gap: 50px;
+    margin-left: 150px;
+    position: relative;
+
+    /* Style */
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+   
+}
+
+.navbar-item{
+    padding: 5px;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+/* Hover Navbar */
+.navbar-item:hover{
+    border: 1px solid #023535;
+    top: -4px;
+    left: -4px;
+    box-shadow: 4px 3px 0px 1px rgba(255, 255, 255, 1);
+    background-color: #16F24D;
+    color: #023535;
+}
+
+/* OPTIONS */
+.options{
+    /* Layout */
+    gap: 50px;
+    margin-right: 100px;
+}
