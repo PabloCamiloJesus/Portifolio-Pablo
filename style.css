@@ -1,15 +1,24 @@
 /* FONTES IMPORTADAS */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+    font-family: Monaco;
+    src: url(fontes/monaco.ttf);
+}
+
 /* RESET DE CONFIGURAÇÕES */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: #101313;
+}
+
 /* HEADER */
-header{
+header {
     /* Dimensions */
     height: 12vh;
 
@@ -19,11 +28,12 @@ header{
     justify-content: space-between;
 
     /* Style */
-    background-color: #023535;
+    background: linear-gradient(to bottom, #000000, #101313);
     color: #fff;
 }
+
 /* NAVBAR */
-.navbar{
+.navbar {
     /* Layout */
     gap: 50px;
     margin-left: 150px;
@@ -33,10 +43,10 @@ header{
     list-style: none;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
-   
+
 }
 
-.navbar-item{
+.navbar-item {
     padding: 5px;
     transition: all 0.5s;
     top: 0;
@@ -45,18 +55,316 @@ header{
 }
 
 /* Hover Navbar */
-.navbar-item:hover{
+.navbar-item:hover {
     border: 1px solid #023535;
     top: -4px;
     left: -4px;
     box-shadow: 4px 3px 0px 1px rgba(255, 255, 255, 1);
     background-color: #16F24D;
-    color: #023535;
+
 }
 
-/* OPTIONS */
-.options{
+.navbar-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-item:hover a {
+    color: #000;
+}
+
+
+#powerButton {
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid #636363;
+    border-radius: 2px;
+    color: #636363;
+    font-family: "Raleway";
+    transition: .1s ease;
+}
+
+#powerButton:hover {
+    border-color: #16F24D;
+    box-shadow: 0px 0px 10px #16F24D;
+    color: #16F24D;
+
+}
+
+/* APRESENTAÇÃO */
+.presents {
+    color: #fff;
+    padding: 30px 100px;
+    height: 600px;
+}
+
+.presents .col-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presents .h1 {
+    font-size: 96px;
+    color: #16F24D;
+    font-style: italic;
+    font-family: "Monaco";
+
+}
+
+#typingText::after {
+    content: "_";
+    display: inline-block;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+
+.presents .h2 {
+    font-style: italic;
+}
+
+/* MOSAICO DE PROJETOS */
+.mosaico-projetos .row {
+    position: relative;
+}
+
+.row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: visible;
+    /* Permite que o hover se expanda para fora */
+}
+
+.projetos {
+    background-color: #fff;
+    margin: 24px;
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out, filter .3s ease-in-out;
+    height: 210px;
+    border-radius: 10px;
+    z-index: 0;
+    max-width: 20%;
+    position: relative;
+    /* Mantém a posição padrão */
+    filter: brightness(0.4);
+}
+
+.projetos img {
+    width: 100%;
+    min-height: 174px;
+
+}
+
+.ver-mais {
     /* Layout */
-    gap: 50px;
-    margin-right: 100px;
+    padding: 5px;
+    margin: auto;
+    max-width: fit-content;
+    max-height: fit-content;
+
+    /* Design */
+    border-radius: 5px 5px 0 0;
+    background-color: transparent;
+    color: #16F24D;
+    border: 1px solid #16F24D;
+    font-size: 14px;
+    font-family: "Raleway";
+
+    /* Posição */
+    position: absolute;
+    top: -244px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    /* Comportamento */
+    transition: .3s ease-in;
+
+    /* Configuração */
+    display: none;
+}
+
+.ver-mais:hover {
+    background-color: #16F24D;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.projetos .texto-projeto {
+    display: none;
+}
+
+/* Efeito ao passar o mouse */
+.projetos:hover {
+    transform: scale(1.1);
+    /* Faz o item crescer sem empurrar os outros */
+    z-index: 10;
+    /* Sobrepõe os outros */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Adiciona um destaque */
+    filter: brightness(1);
+}
+
+.projetos:hover .ver-mais {
+    display: block;
+}
+
+.more-details {
+
+    /* Layout */
+    flex-direction: column;
+    padding: 0;
+
+    /* Posicionamento */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Design */
+    background-color: #101313;
+    border-radius: 10px;
+    border: #16F24D solid 1px;
+    box-shadow: 0px 0px 20px #16F24D;
+
+    /* Dimensões */
+    height: 600px;
+    width: 60%;
+
+}
+
+.close-button {
+    padding: 2px 7px;
+}
+
+.close-button button {
+    background: transparent;
+    font-size: 24px;
+    color: #fff;
+    border: none;
+}
+
+.details-img {
+    height: 55%;
+    padding: 24px;
+}
+
+.details-img img {
+    height: 100%;
+    width: 50%;
+}
+
+.details-title {
+    display: flex;
+    align-items: end;
+    position: relative;
+    transform: translate(0%, -50%);
+    color: #fff;
+
+}
+
+.details-text {
+    padding: 24px;
+    color: #fff;
+
+}
+
+.link-paragraph a {
+    text-decoration: none;
+    color: #fff;
+    transition: ease .3s;
+}
+
+.link-paragraph a:hover {
+    color: #16F24D;
+}
+
+/* REDES SOCIAIS */
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    height: 600px;
+    color: #fff;
+}
+
+.social-img{
+    min-height: 200px;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.social-list li {
+    margin: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+}
+
+
+.social-media li i {
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+.social-list li a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+.social-list li:hover a{
+    color: #000;
+}
+
+.social-list li:hover{
+    background-color: #fafafa;
+}
+
+.social-list li:nth-child(1):hover i {
+    background: linear-gradient(to right, #E608E9, #FF0175, #FDC403);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.social-list li:nth-child(2):hover i {
+    background: #233ac6;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.social-list li:nth-child(3):hover i {
+    background: #0266C8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+
+/* FOOTER */
+
+.copyright{
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #000000, #101313);
+    color: #fff;
 }
