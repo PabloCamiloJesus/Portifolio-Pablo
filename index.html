@@ -13,6 +13,9 @@
     <!-- ICON BOOSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+
     <!-- CSS PERSONALIZADO -->
     <link rel="stylesheet" href="style.css">
 
@@ -20,7 +23,7 @@
     <script src="script.js" type="text/javascript" defer></script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/png" sizes="32">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
 
 </head>
 
@@ -31,9 +34,9 @@
 
         <!-- MENU DE NAVEGAÇÃO DA PÁGINA -->
         <div class="navbar d-flex align-items-center">
-            <li class="navbar-item"><a href=".navbar">Home</a></li>
-            <li class="navbar-item"><a href=".mosaico-projetos">Projects</a></li>
-            <li class="navbar-item"><a href=".contatos">Contacts</a></li>
+            <li class="navbar-item"><a href="#header">Home</a></li>
+            <li class="navbar-item"><a href="#mosaico-projetos">Projects</a></li>
+            <li class="navbar-item"><a href="#contatos">Contacts</a></li>
         </div>
 
     </header>
@@ -51,7 +54,7 @@
                     <p class="h2 mb-5" style="color: #969696; font-family: 'Raleway';">Um desenvolvedor web</p>
                     <p style="font-family: 'Raleway';">Sou um técnico em desenvolvimento de sistemas, focado principalmente em interfaces web e metodologias ágeis. Confira meus projetos a seguir!</p>
                     <!-- Opção de Tema Claro ou Escuro -->
-                    <button onclick="onButton()" id="powerButton">Ligar    <i class="bi bi-power"></i></button>
+                    
                 </div>
                 <div class="col-6">
                     <img src="img/mini-pablo.png" alt="" height="320" width="320">
@@ -61,14 +64,16 @@
 
         <!-- Mosaico com projetos já finalizados -->
 
-        <section class="mosaico-projetos container-fluid">
+        <section class="mosaico-projetos container-fluid" id="mosaico-projetos">
+
+            <P class="h1 text-center mb-5" style="color: #fff;">Meus mais recentes projetos</P>
             <div class="position-relative d-flex justify-content-center" id="container-projetos">
                 
             </div>
         </section>
 
         <!-- REDES SOCIAIS -->
-        <section class="social-media container">
+        <section class="social-media container" id="contatos">
             <div class="row">
                 <div class="col-6 d-flex justify-content-end">
                     <img src="img/social-media.jpg" alt="" class="social-img col-12">

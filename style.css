@@ -73,24 +73,6 @@ header {
     color: #000;
 }
 
-
-#powerButton {
-    padding: 5px;
-    background-color: transparent;
-    border: 1px solid #636363;
-    border-radius: 2px;
-    color: #636363;
-    font-family: "Raleway";
-    transition: .1s ease;
-}
-
-#powerButton:hover {
-    border-color: #16F24D;
-    box-shadow: 0px 0px 10px #16F24D;
-    color: #16F24D;
-
-}
-
 /* APRESENTAÇÃO */
 .presents {
     color: #fff;
@@ -147,17 +129,19 @@ header {
     background-color: #fff;
     margin: 24px;
     transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out, filter .3s ease-in-out;
-    height: 210px;
-    border-radius: 10px;
+    height: 200px;
+    border-radius: 20px;
     z-index: 0;
     max-width: 20%;
     position: relative;
     /* Mantém a posição padrão */
     filter: brightness(0.4);
+
 }
 
 .projetos img {
     width: 100%;
+    height: 100%;
     min-height: 174px;
 
 }
@@ -179,7 +163,7 @@ header {
 
     /* Posição */
     position: absolute;
-    top: -244px;
+    top: -234px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -218,7 +202,6 @@ header {
 }
 
 .more-details {
-
     /* Layout */
     flex-direction: column;
     padding: 0;
@@ -236,7 +219,7 @@ header {
     box-shadow: 0px 0px 20px #16F24D;
 
     /* Dimensões */
-    height: 600px;
+    height: fit-content;
     width: 60%;
 
 }
@@ -252,14 +235,8 @@ header {
     border: none;
 }
 
-.details-img {
-    height: 55%;
-    padding: 24px;
-}
-
-.details-img img {
-    height: 100%;
-    width: 50%;
+.carousel-item {
+    height: 500px;
 }
 
 .details-title {

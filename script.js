@@ -24,11 +24,11 @@ const typingText = document.getElementById("typingText");
 
 let i = 0;
 function typeEffect() {
-  if (i < text.length) {
-    typingText.innerHTML += text[i]; // Usa innerHTML para evitar sobrescrever
-    i++;
-    setTimeout(typeEffect, 100);
-  }
+    if (i < text.length) {
+        typingText.innerHTML += text[i]; // Usa innerHTML para evitar sobrescrever
+        i++;
+        setTimeout(typeEffect, 100);
+    }
 }
 
 typeEffect();
@@ -49,29 +49,35 @@ setInterval(() => {
 
 const arrayDetails = [
     {
-        title: "titulo 1",
-        text: "vapo vapp",
-        image: "image/image",
-        link: "link1",
-        github: "github1"
+        title: "Cat Assist",
+        text: "Consiste em uma central de atendimento para um Centro de Atividades Esportivas, no qual bifurca em dois principais serviços, o atendimento online, realizado por funcionários da secretaria do CAT 166 e o atendimento automatizado realizado por IA. Desenvolvido com React.js, Gemini, Firebase e dentre outras tecnologias",
+        image1: "img/carousel-projects/Cat-Assist/banner1.png",
+        image2: "img/carousel-projects/Cat-Assist/banner2.png",
+        image3: "img/carousel-projects/Cat-Assist/banner3.png",
+        link: "Ainda indisponível na web",
+        github: "https://github.com/PabloCamiloJesus/cat-assist-web"
     },
-    
+
     {
-        title: "titulo 2",
-        text: "vapo vapp",
-        image: "image/image",
-        link: "link 2",
-        github: "github 2"
+        title: "TechMage Chat",
+        text: "Um chat online em tempo real para comunicação interna empresarial, focado especificamente em envio de mensagens rápidas e avisos.",
+        image1: "img/carousel-projects/TechMage-Chat/banner1.png",
+        image2: "img/carousel-projects/TechMage-Chat/banner2.png",
+        image3: "img/carousel-projects/TechMage-Chat/banner3.png",
+        link: "Ainda indisponível na web",
+        github: "https://github.com/PabloCamiloJesus/chat-Magetech"
     },
-    
+
     {
-        title: "titulo 3",
-        text: "vapo vapp",
-        image: "image/image",
-        link: "link 3",
-        github: "github 3"
+        title: "Pineapples Company",
+        text: "Landpage com objetivo de representar um e-commerce de produtos esportivos, utilizando somente HTML e CSS. Se trata de um projeto que foi feito em período educacional.",
+        image1: "img/carousel-projects/Pineapples-Company/banner1.png",
+        image2: "img/carousel-projects/Pineapples-Company/banner2.png",
+        image3: "img/carousel-projects/Pineapples-Company/banner3.png",
+        link: "pinesports.netify.app",
+        github: "https://github.com/PabloCamiloJesus/PineApple-Company"
     },
-    
+
 ];
 
 const containerProjetos = document.getElementById("container-projetos")
@@ -79,7 +85,7 @@ const containerProjetos = document.getElementById("container-projetos")
 containerProjetos.innerHTML = arrayDetails.map((quadro, index) => `
     <div class="projetos">
         <button type="button" class="ver-mais" onclick="showDetails(${index})">Mais Detalhes</button>
-        <img src="favicon.ico" alt="">
+        <img src="${quadro.image1}" alt="">
     </div>
     
 `).join("")
@@ -103,11 +109,31 @@ function showDetails(index) {
             </div>
 
             <div class="details-img d-flex align-items-center flex-column col-12">
-                <img src="mini-pablo.png" alt="">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="${quadro.image1}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="${quadro.image2}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="${quadro.image3}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
 
             <div class="details-text col-12">
-                <span class="h4 details-title">${quadro.title}</span>
+                <span class="h3 details-title">${quadro.title}</span>
 
                 <p class="details-description">
                     ${quadro.text}
@@ -135,12 +161,12 @@ function showDetails(index) {
 }
 
 
-function closeDetails(){
+function closeDetails() {
     const closeDetails = document.querySelector(".details-container")
 
     closeDetails.style.display = "none";
 
-    document.querySelectorAll('.header, .main, .footer').forEach((element) =>{
+    document.querySelectorAll('.header, .main, .footer').forEach((element) => {
         element.style.filter = 'blur(0px)'
     })
 
