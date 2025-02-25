@@ -31,7 +31,7 @@ setInterval(() => {
 const arrayDetails = [
     {
         title: "Cat Assist",
-        text: "Consiste em uma central de atendimento para um Centro de Atividades Esportivas, no qual bifurca em dois principais serviços, o atendimento online, realizado por funcionários da secretaria do CAT 166 e o atendimento automatizado realizado por IA. Desenvolvido com React.js, Gemini, Firebase e dentre outras tecnologias",
+        text: "Consiste em uma central de atendimento para um Centro de Atividades Esportivas, no qual bifurca em dois principais serviços, o atendimento online, realizado por funcionários da secretaria do CAT 166 e o atendimento automatizado realizado por IA. Desenvolvido com React.js, Gemini, Firebase e dentre outras tecnologias. Em equipe.",
         image1: "img/carousel-projects/Cat-Assist/banner1.png",
         image2: "img/carousel-projects/Cat-Assist/banner2.png",
         image3: "img/carousel-projects/Cat-Assist/banner3.png",
@@ -41,7 +41,7 @@ const arrayDetails = [
 
     {
         title: "TechMage Chat",
-        text: "Um chat online em tempo real para comunicação interna empresarial, focado especificamente em envio de mensagens rápidas e avisos.",
+        text: "Um chat online em tempo real para comunicação interna empresarial, focado especificamente em envio de mensagens rápidas e avisos. Em equipe.",
         image1: "img/carousel-projects/TechMage-Chat/banner1.png",
         image2: "img/carousel-projects/TechMage-Chat/banner2.png",
         image3: "img/carousel-projects/TechMage-Chat/banner3.png",
@@ -51,7 +51,7 @@ const arrayDetails = [
 
     {
         title: "Pineapples Company",
-        text: "Landpage com objetivo de representar um e-commerce de produtos esportivos, utilizando somente HTML e CSS. Se trata de um projeto que foi feito em período educacional.",
+        text: "Landpage com objetivo de representar um e-commerce de produtos esportivos, utilizando somente HTML e CSS. Se trata de um projeto que foi feito em período educacional. Em equipe.",
         image1: "img/carousel-projects/Pineapples-Company/banner1.png",
         image2: "img/carousel-projects/Pineapples-Company/banner2.png",
         image3: "img/carousel-projects/Pineapples-Company/banner3.png",
