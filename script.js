@@ -1,23 +1,4 @@
 
-// Essa função está determinando o funcionamento do Botão de Ligar e Desligar o Sistema
-var state = 0;
-
-function onButton() {
-
-    if (state == 0) {
-        console.log("On");
-        state = 1;
-    } else if (state == 1) {
-
-        console.log("Off")
-        state = 0;
-    } else {
-        console.log("Error Circuit")
-        state = 0;
-    }
-    // console.log("Funcionou")
-}
-
 // Este bloco fará com que o texto tenha efeito de digitado
 const text = "Heyo, eu sou Pablo Camilo";
 const typingText = document.getElementById("typingText");
@@ -100,11 +81,11 @@ function showDetails(index) {
     const quadro = arrayDetails[index]; // Obtém o item correto
 
     detailsContainer.innerHTML = `
-        <div class="more-details">
+        <div class="more-details animate__backInUp">
 
             <div class="close-button col-12 d-flex justify-content-end">
                 <button type="button" onclick="closeDetails()">
-                    <i class="bi bi-x-lg"></i>
+                    X
                 </button>
             </div>
 

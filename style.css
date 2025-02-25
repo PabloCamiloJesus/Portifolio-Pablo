@@ -17,6 +17,7 @@ body {
     background-color: #101313;
 }
 
+
 /* HEADER */
 header {
     /* Dimensions */
@@ -98,14 +99,14 @@ header {
     content: "_";
     display: inline-block;
     animation: blink 0.7s infinite;
-  }
-  
-  @keyframes blink {
+}
+
+@keyframes blink {
     50% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
+}
+
 
 .presents .h2 {
     font-style: italic;
@@ -132,7 +133,7 @@ header {
     height: 200px;
     border-radius: 20px;
     z-index: 0;
-    max-width: 20%;
+    max-width: 30%;
     position: relative;
     /* Mantém a posição padrão */
     filter: brightness(0.4);
@@ -225,14 +226,27 @@ header {
 }
 
 .close-button {
-    padding: 2px 7px;
+    position: absolute;
+    top: -32px;
+
 }
 
 .close-button button {
     background: transparent;
-    font-size: 24px;
-    color: #fff;
-    border: none;
+    display: grid;
+    place-items: center;
+    height: 32px;
+    width: 32px;
+    font-size: 20px;
+    color: #16F24D;
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid #16F24D;
+    transition: .3s ease;
+}
+
+.close-button button:hover {
+    background-color: #16F24D;
+    color: #000;
 }
 
 .carousel-item {
@@ -274,11 +288,19 @@ header {
     color: #fff;
 }
 
-.social-img{
+.social-img {
     min-height: 200px;
     max-width: 450px;
     width: 100%;
     border-radius: 10px;
+}
+.social-title, .mosaico-projetos p{
+    font-family: "Monaco", sans-serif;
+    font-size: 60px;
+    color: #16F24D;
+}
+.social-title{
+    margin-left: 68px;
 }
 
 .social-list li {
@@ -304,11 +326,11 @@ header {
     transition: .3s ease;
 }
 
-.social-list li:hover a{
+.social-list li:hover a {
     color: #000;
 }
 
-.social-list li:hover{
+.social-list li:hover {
     background-color: #fafafa;
 }
 
@@ -336,7 +358,7 @@ header {
 
 /* FOOTER */
 
-.copyright{
+.copyright {
     width: 100%;
     height: 74px;
     display: flex;
@@ -344,4 +366,88 @@ header {
     align-items: center;
     background: linear-gradient(to top, #000000, #101313);
     color: #fff;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 767px){
+
+    .header{
+        padding: 0;
+        justify-content: center;
+    }
+    .navbar{
+        margin: 10px;
+        
+    }
+    .presents{
+        padding: 20px;
+    } 
+    #typingText{
+        font-size: 72px;
+    }
+
+    #container-projetos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .projetos{
+        min-width: 60%;
+    }
+
+    .more-details{
+        width: 90%;
+    }
+
+    .carousel-item{
+        height: 100%;
+    }
+
+    .details-title{
+        margin: 5px 0px 0px 0px;
+    }
+    
+    .details-text{
+        padding: 20px;
+    }
+
+    .details-description, .link-details, .github-details{
+        font-size: 14px;
+    }
+    .link-paragraph{
+        margin: 0;
+    }
+
+    .social-title{
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media (min-width:768px) and (max-width:1000px){
+    .presents{
+        flex-direction: column;
+        height: fit-content;
+        margin-bottom: 50px;
+    }
+
+    .presents .row{
+        justify-content: center;
+    }
+
+    #typingText{
+        font-size: 60px;
+    }
+
+    .projetos{
+        width: 50%;
+    }
+
+    .social-image{
+        height: fit-content;
+    }
+
+    .social-title, .social-list{
+        margin: 0;
+        padding: 0;
+    }
 }
