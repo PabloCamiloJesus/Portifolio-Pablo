@@ -100,6 +100,7 @@ header {
 
 }
 
+
 #typingText::after {
     content: "_";
     display: inline-block;
@@ -117,7 +118,7 @@ header {
     font-style: italic;
 }
 
-.presents-text p{
+.presents-text p {
     font-family: "Raleway";
 }
 
@@ -261,8 +262,7 @@ header {
 .carousel-item {
     height: 500px;
     width: 100%;
-    margin-top: 50px;
-   
+
 }
 
 .carousel-item img {
@@ -294,6 +294,127 @@ header {
 .link-paragraph a:hover {
     color: #16F24D;
 }
+
+/* ABOUT ME */
+#about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: transparent;
+    margin-top: 200px;
+}
+
+.neon-bg {
+    width: 90vw;
+    height: min-content;
+    border-radius: 20px;
+    background: transparent;
+    background-size: 300% 300%;
+    filter: brightness(0.7);
+    animation: pulse 8s ease infinite;
+    transition: all 0.5s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 0 15px #39ff14, 0 0 30px #00ff88, 0 0 45px #00ffaa;
+}
+
+.neon-bg:hover {
+    filter: brightness(1.2);
+    background-position: 100% 0;
+    animation: pulse-fast 3s ease infinite;
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 25px #39ff14, 0 0 50px #00ff88, 0 0 75px #00ffaa;
+}
+
+@keyframes pulse {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse-fast {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+
+#about-me article {
+    color: #fff;
+}
+
+#about-me article {
+    padding: 20px 40px 20px 20px;
+}
+
+#about-me section,
+#carouselExampleSlidesOnly,
+#carousel-inner,
+.carousel-me img {
+    height: 100%;
+}
+
+.carousel-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* altura padrão do slide */
+    /* opcional: evita fundo branco em imagens menores */
+
+}
+
+#carousel-inner {
+    border-radius: 0px 18px 18px 0px;
+}
+
+.carousel-me img {
+    height: 600px;
+    width: 100%;
+    border-radius: 0px;
+    filter: brightness(0.7);
+
+    /* Máscara para efeito fade */
+    mask-image: linear-gradient(to right, transparent 20%, black 50%);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+}
+
+#about-me .h1 {
+    font-family: "Monaco";
+    font-size: 52px;
+    text-align: center;
+    color: #16F24D;
+}
+
+.about-me-text {
+    font-family: "Raleway";
+    line-height: 35px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.highlight {
+    color: #16F24D;
+}
+
 
 /* REDES SOCIAIS */
 .social-media {
