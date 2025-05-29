@@ -376,8 +376,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 100%;
-    /* altura padrão do slide */
-    /* opcional: evita fundo branco em imagens menores */
 
 }
 
@@ -565,6 +563,30 @@ header {
 
     .link-paragraph {
         margin: 0;
+    }
+
+    #about-me {
+        position: relative;
+    }
+
+    #about-me article {
+        z-index: 3;
+        transition: .3s ease;
+    }
+
+    #about-me article:hover {
+        opacity: 0;
+        
+    }
+
+    #about-me section {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .carousel-me img {
+        mask:none;
+        border-radius: 18px;
     }
 
     .social-title {
